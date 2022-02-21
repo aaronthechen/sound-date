@@ -457,14 +457,6 @@ submitButton.addEventListener('click', () => {
     if (selectedMonth && selectedDay) {
         inputScreen.style.display = 'none'
         freesound.getSound(ids[selectedMonth + " " + selectedDay] + "/?fields=previews,description,url,id", sound => {
-            console.log(sound)
-            const description = document.createElement('p')
-            description.innerHTML = sound.description
-            const download = document.createElement('a')
-            download.href = sound.url
-            download.innerHTML = 'Freesound Link'
-            resultScreen.appendChild(description)
-            resultScreen.appendChild(download)
             resultScreen.style.display = 'block'
             const wavesurfer = WaveSurfer.create({
                 container: '#waveform',
@@ -472,10 +464,18 @@ submitButton.addEventListener('click', () => {
                 height: 100,
                 waveColor: '#ff5501',
                 progressColor: '#d44700',
+                normalize: true
             })
             wavesurfer.load(sound.previews['preview-hq-mp3'])
             wavesurfer.on('ready', () => {
                 wavesurfer.play()
+                const description = document.createElement('p')
+                description.innerHTML = sound.description
+                const download = document.createElement('a')
+                download.href = sound.url
+                download.innerHTML = 'Freesound Link'
+                resultScreen.appendChild(description)
+                resultScreen.appendChild(download)
             })
 
         })
