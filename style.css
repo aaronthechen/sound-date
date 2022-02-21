@@ -21,6 +21,7 @@ nav {
 }
 
 a {
+    background-color: #333;
     display: inline-block;
     color: white;
     text-align: center;
@@ -31,6 +32,14 @@ a {
 a:hover {
     background-color: #111;
     transition: background-color 0.3s linear;
+}
+
+p > a {
+    all:revert
+}
+
+p > a:hover {
+    all: revert;
 }
 
 #sourcecode {
@@ -82,7 +91,7 @@ a:hover {
 }
 
 p {
-    padding: 0px 10px;
+    padding: 10px;
 }
 
 li {
