@@ -27,11 +27,11 @@ a {
     text-align: center;
     padding: 14px 16px;
     text-decoration: none; 
+    transition: background-color 0.3s linear;
 }
 
 a:hover {
     background-color: #111;
-    transition: background-color 0.3s linear;
 }
 
 p > a {
@@ -96,7 +96,7 @@ p {
 
 li {
     list-style: none;
-    
+    transition: background-color 0.3s linear;
 }
 
 ul {
@@ -112,17 +112,16 @@ label {
   padding: 15px;
   cursor : pointer;
   display: block;
+  transition: background-color 0.3s linear;
 }
 
 label:hover {
     background-color: #111;
-    transition: background-color 0.3s linear;
 }
 
 li:hover {
     cursor: pointer;
     background-color: #d3d3d3;
-    transition: background-color 0.3s linear;
 }
 
 .slide {
@@ -144,12 +143,12 @@ li:hover {
   cursor : pointer;
     border: none;
     font-size: 20px;
+    transition: background-color 0.3s linear;
 }
 
 #submit:hover {
     cursor: pointer;
     background-color: #f44336;
-    transition: background-color 0.3s linear;
 }
 
 .slide li {padding : 15px; user-select: none;}
